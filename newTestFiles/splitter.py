@@ -6,16 +6,20 @@ import fileinput
 song_file, users_file, triplet_file = sys.argv[1:4]
 
 counter=1;
-
+#Song hashmap
 songs={};
+#user map
 users={};
+
 #Reading the song file and adding the song names to a hashmap
 for line in fileinput.input([song_file]):
+    #Remove newlines from the string and add the song name to the map with the value as the number
 	songs[line.rstrip('\n').split(' ')[0]] = counter;
 	counter=counter+1;
 
-
+#reinitialize counter
 counter=1;
+
 #Reading the user file and adding the user names to a hashmap
 for line in fileinput.input([users_file]):
 	users[line.rstrip('\n').split(' ')[0]] = counter;
