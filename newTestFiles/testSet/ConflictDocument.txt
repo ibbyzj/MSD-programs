@@ -1,2 +1,2 @@
 ** A document that shows a conflict**
-User1 is currently working here
+User1 is currently working here and User2 is also working here
